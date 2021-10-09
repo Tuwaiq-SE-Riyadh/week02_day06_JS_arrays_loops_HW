@@ -38,7 +38,7 @@ Note: A number is prime if it is divided by 1 and itself only.
 
 ## Arrays
 
-Edit main.js file by adding the following:
+Create an html file, link it to the main.js file and add the following to the js file:
 
 ### MAP
 1. Get array of objects with just name and height properties
