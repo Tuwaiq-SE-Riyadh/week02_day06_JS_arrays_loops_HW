@@ -1,0 +1,1 @@
+# week02_day06_JS_arrays_loops_HW
