@@ -28,3 +28,78 @@ const characters = [
         gender: 'male',
     },
 ];
+
+
+function sum(array){
+    let result = 0
+    for( let i = 0; i < array.length; i++){
+        result += array[i] 
+    }
+    console.log(result)
+}
+function max(array){
+    let m = 0;
+      for (let  i = 0; i !=array.length; ++i) {
+    if (array[i] > m) {
+      m = array[i];
+    }
+  }
+  return m;
+  
+}
+function reverse(array){
+    const reversed = array.reverse();
+console.log('reversed:', reversed);
+}
+
+function stars(x) {
+    let array=[];
+          for (let i=1; i<=x; i++) {
+            for (let j=0; j<=i; j++) {
+                array.push("*")
+                let curr=array[j]           
+                console.log(curr); 
+                        
+
+            }
+            console.log("\r")
+        
+        }
+ 
+    }
+    function prime(n) {
+        
+          if (n===1)
+          {
+            return false;
+          }
+          else if(n === 2)
+          {
+            return true;
+          }else
+          {
+              let x = 2
+            while(x < n)
+            {
+              if(n % x === 0)
+              {
+                return false;
+              }
+               x++
+            }
+            return true;  
+          }
+        }
+
+         function maping(characters){
+        let y=characters.map(function(element,index){
+            return element.height  })
+            console.log("height is "+y);
+
+       let x=characters.map(function(element,index){
+            return element.name  })
+            console.log("name is "+x);
+        
+        }
+        
+    
