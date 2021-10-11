@@ -28,3 +28,37 @@ const characters = [
         gender: 'male',
     },
 ];
+
+function nameAndHeight(){
+    namesAndHeights=[]
+    
+characters.map(function(element){
+
+    return namesAndHeights.push(element.name, element.height);
+    
+})
+    console.log(namesAndHeights)
+    
+}
+
+function firstNameOnly(){
+    Fnames=[]
+    firstName=""
+characters.map(function(element){
+    for(i=0;i<element.name.length; i++){
+        if(element.name.charAt(i)!==' '){
+        firstName+=element.name.charAt(i)
+        
+        }else{
+            Fnames.push(firstName);
+            firstName=""
+            break
+        }
+    }
+
+    return Fnames
+    
+})
+    console.log(Fnames)
+    
+}
