@@ -53,19 +53,15 @@ console.log('reversed:', reversed);
 }
 
 function stars(x) {
-    let array=[];
+    let start =" ";
           for (let i=1; i<=x; i++) {
-            for (let j=0; j<=i; j++) {
-                array.push("*")
-                let curr=array[j]           
-                console.log(curr); 
-                        
-
+            for (let j=1; j<=i; j++) {        
+                start +="*" 
+                console.log(start);
             }
-            console.log("\r")
+            console.log("")
         
         }
- 
     }
     function prime(n) {
         
@@ -101,5 +97,12 @@ function stars(x) {
             console.log("name is "+x);
         
         }
-        
-    
+
+        function reduceMass(characters){
+
+        console.log(characters.reduce(characters.mass));
+
+       let massName= characters.name.reduce(function(previousValue, currentValue) {
+            return previousValue.mass + currentValue.mass
+          })
+     console.log(massName);}
