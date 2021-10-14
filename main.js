@@ -12,7 +12,7 @@ function summations(arr){
 
 // Q2
 function Maximum(arr){
-    let max=0;
+    let max=arr[0];
     for(let i=0;i<arr.length;i++){
         if(arr[i]>max){
             max=arr[i];
@@ -32,21 +32,139 @@ function reverse1(arr){
 
 }
 
-// Q4
- function stars(){
-     for(let i=1;i<=5;i++){
-        
+// Q4**
+ function stars(a){
+     
+     for(let i=1;i<=a;i++){
+         let str="";
          for (let j=1;j<=i;j++){
-        
-                console.log("*")
-            
+            str+="*"
+                
          }
+         console.log(str)
          console.log("\n")
      }
 
  }
 
+ //Q5
+ function isPrime(a){
+     let i=2
+     let b;
+     let c="true"
+     while(i<a){
+         b=a%i;
+         console.log(b)
+         if(b===0){
+            c="false"
+         }
+         i++
+     }
+     if (c==="false"){
+         console.log("Not prime number ")
+     }else{
+        console.log("Prime number ")
+     }
+ }
 
+
+
+
+// Bouns for array lab 
+
+//   Q1 Bouns
+function MAP(){
+    let arr;
+    let arr2;
+    arr=characters.map(function(elemnt ,index){
+        return elemnt.name
+    })
+
+    arr2=characters.map(function(elemnt ,index){
+        return elemnt.height
+    })
+    console.log("the array of names "+arr)
+    console.log("the array of height "+arr2)
+}
+
+
+// Q2 Bouns 
+
+function Reduce(){
+    
+    const total = characters.reduce(function (acc, element, index) {
+        return acc + element.height;
+      }, 0);
+      console.log(total)
+
+      const total2 = characters.reduce(function (acc, element, index) {
+        return acc + element.eye_color +" ";
+      }, 0);
+      console.log(total2)
+}
+
+// Q3
+
+function filter(){
+    
+    const Less = characters.filter(function ( element, index) {
+        return  element.height<200
+      });
+      
+          console.log(Less)
+      
+
+      const male = characters.filter(function ( element, index) {
+         return element.gender=="male"
+       });
+      console.log(male)
+    }
+
+
+
+// bouns for this HW
+
+
+// Q1
+function MAP(){
+    let arr;
+    let arr2;
+    arr=characters.map(function(elemnt ,index){
+        return elemnt.name , elemnt.height
+    })
+
+    arr2=characters.map(function(elemnt ,index){
+        return elemnt.name
+    })
+    console.log("the array of opject {name;height} "+arr)
+    console.log("the array of height "+arr2)
+}
+
+
+function Reduce(){
+    
+    const total = characters.reduce(function (acc, element, index) {
+        return acc + element.mass;
+      }, 0);
+      console.log(total)
+
+
+}
+
+function filter(){
+    
+    const L = characters.filter(function ( element, index) {
+        return  element.mass>100
+      });
+      
+          console.log(L)
+      
+
+      const fmale = characters.filter(function ( element, index) {
+         return element.gender=='female'
+       });
+      console.log(fmale)
+    }
 
 
 
